@@ -1,21 +1,9 @@
 const mongoose = require('mongoose');
-const PersonSchema = new mongoose.Schema({
-    nombre: {
-        type: String,
-        required: true
-    },
-    edad: {
-        type: Number,
-        required: true
-    },
-    tipoSangre: {
-        type: String,
-        required: true
-    },
-    nss: {
-        type: String,
-        required: true
-    },
+let personSchema = new mongoose.Schema({
+    nombre: String,
+    edad: Number,
+    tipoSangre: String,
+    nss: String
 });
 
-module.exports = mongoose.model('Persons', PersonSchema);
+module.exports = mongoose.model('Persons', personSchema) 
